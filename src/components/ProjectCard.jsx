@@ -1,22 +1,19 @@
 import { motion } from 'framer-motion'
-import { ArrowUpRight, Check } from 'lucide-react'
+import { ArrowUpRight, Check, Apple, Play } from 'lucide-react'
 
 /**
  * Reusable project card. When `featured`, renders a larger two-column layout;
  * otherwise a compact vertical card. Heavy hover effects are desktop-only.
+ * Supports separate App Store and Google Play links.
  */
-function getStoreLabel(link) {
-  if (link.includes('play.google.com')) return 'View on Google Play'
-  if (link.includes('apps.apple.com')) return 'View on App Store'
-  return 'View project'
-}
-
 export default function ProjectCard({ project, featured = false, index = 0 }) {
-  const hasLink = Boolean(project.link)
-  const storeLabel = hasLink ? getStoreLabel(project.link) : ''
+  const appStoreLink = project.appStore_link || ''
+  const playStoreLink = project.playStore_link || ''
+  const primaryLink = appStoreLink || playStoreLink
+  const hasLink = Boolean(primaryLink)
   const LinkTag = hasLink ? 'a' : 'div'
   const linkProps = hasLink
-    ? { href: project.link, target: '_blank', rel: 'noopener noreferrer' }
+    ? { href: primaryLink, target: '_blank', rel: 'noopener noreferrer' }
     : {}
 
   return (
@@ -103,16 +100,32 @@ export default function ProjectCard({ project, featured = false, index = 0 }) {
           ))}
         </div>
 
+        {/* Store links */}
         {hasLink && (
-          <a
-            href={project.link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-accent-soft hover:text-white"
-          >
-            {storeLabel}
-            <ArrowUpRight size={16} aria-hidden="true" />
-          </a>
+          <div className="mt-5 flex flex-wrap gap-2.5">
+            {appStoreLink && (
+              <a
+                href={appStoreLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 rounded-lg border border-line bg-white/[0.03] px-3 py-2 text-sm font-semibold text-ink transition-all hover:border-accent/50 hover:text-white"
+              >
+                <Apple size={16} aria-hidden="true" />
+                App Store
+              </a>
+            )}
+            {playStoreLink && (
+              <a
+                href={playStoreLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 rounded-lg border border-line bg-white/[0.03] px-3 py-2 text-sm font-semibold text-ink transition-all hover:border-accent/50 hover:text-white"
+              >
+                <Play size={16} aria-hidden="true" />
+                Google Play
+              </a>
+            )}
+          </div>
         )}
       </div>
     </motion.article>

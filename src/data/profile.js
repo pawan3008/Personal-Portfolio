@@ -22,7 +22,7 @@ export const profile = {
 
 export const stats = [
   { value: '4+', label: 'Years Experience' },
-  { value: '10+', label: 'Projects' },
+  { value: '20+', label: 'Projects' },
   { value: 'iOS & Android', label: 'Platforms' },
   { value: 'React Native', label: 'Specialization' },
 ]

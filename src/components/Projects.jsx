@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { ArrowUpRight } from 'lucide-react'
+import { Apple, Play } from 'lucide-react'
 import Section from './Section'
 import ProjectCard from './ProjectCard'
 import { projects } from '../data/projects'
@@ -37,29 +37,42 @@ export default function Projects() {
           </h3>
           <div className="grid gap-3 sm:grid-cols-2">
             {moreApps.map((app, i) => (
-              <motion.a
+              <motion.div
                 key={app.name}
-                href={app.link}
-                target="_blank"
-                rel="noopener noreferrer"
                 initial={{ opacity: 0, y: 16 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: '-40px' }}
                 transition={{ duration: 0.4, ease: 'easeOut', delay: (i % 2) * 0.06 }}
-                className="group surface flex items-center justify-between gap-3 p-4 transition-all hover:border-accent/40 md:hover:-translate-y-0.5"
+                className="surface flex items-center justify-between gap-3 p-4 transition-colors hover:border-accent/40"
               >
-                <span className="min-w-0">
-                  <span className="block truncate font-medium text-ink group-hover:text-white">
-                    {app.name}
-                  </span>
-                  <span className="font-mono text-xs text-ink-faint">{app.store}</span>
+                <span className="min-w-0 font-medium text-ink">{app.name}</span>
+                <span className="flex shrink-0 items-center gap-2">
+                  {app.appStore_link && (
+                    <a
+                      href={app.appStore_link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={`${app.name} on the App Store`}
+                      className="inline-flex items-center gap-1 rounded-md border border-line px-2 py-1 text-xs text-ink-soft transition-colors hover:border-accent/50 hover:text-white"
+                    >
+                      <Apple size={14} aria-hidden="true" />
+                      iOS
+                    </a>
+                  )}
+                  {app.playStore_link && (
+                    <a
+                      href={app.playStore_link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={`${app.name} on Google Play`}
+                      className="inline-flex items-center gap-1 rounded-md border border-line px-2 py-1 text-xs text-ink-soft transition-colors hover:border-accent/50 hover:text-white"
+                    >
+                      <Play size={14} aria-hidden="true" />
+                      Android
+                    </a>
+                  )}
                 </span>
-                <ArrowUpRight
-                  size={18}
-                  className="shrink-0 text-ink-soft transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-accent-soft"
-                  aria-hidden="true"
-                />
-              </motion.a>
+              </motion.div>
             ))}
           </div>
         </div>

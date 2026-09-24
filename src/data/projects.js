@@ -21,7 +21,8 @@ export const projects = [
       'Subscription functionality',
     ],
     tech: ['React Native', 'Firebase', 'Native Modules', 'Meta SDK', 'TikTok SDK', 'REST APIs'],
-    link: 'https://apps.apple.com/in/app/pte-practice-ai-mock-tests/id6443614190',
+    appStore_link: 'https://apps.apple.com/in/app/pte-practice-ai-mock-tests/id6443614190',
+    playStore_link: 'https://play.google.com/store/apps/details?id=com.languageacademy',
   },
   {
     name: 'WWIPL',
@@ -38,7 +39,8 @@ export const projects = [
       'Secure payment flows',
     ],
     tech: ['React Native', 'Charts', 'Payments', 'REST APIs'],
-    link: '',
+    appStore_link: 'https://apps.apple.com/in/app/wwipl/id6747425911',
+    playStore_link: 'https://play.google.com/store/apps/details?id=com.wwipl&hl=en',
   },
   {
     name: 'Mytra',
@@ -61,7 +63,8 @@ export const projects = [
       'Live order tracking',
     ],
     tech: ['React Native', 'GPS', 'Maps', 'Social', 'E-commerce'],
-    link: '',
+    appStore_link: 'https://apps.apple.com/in/app/wwipl/id6526488238',
+    playStore_link: 'https://play.google.com/store/apps/details?id=com.thebikerscompany',
   },
   {
     name: 'Section8University',
@@ -95,7 +98,8 @@ export const projects = [
       'React Native loyalty and service application, published live on the Google Play Store.',
     features: ['Loyalty program', 'Service management', 'Cross-platform mobile app'],
     tech: ['React Native', 'Android', 'iOS'],
-    link: 'https://play.google.com/store/apps/details?id=com.silverproject',
+    appStore_link: 'https://apps.apple.com/in/app/wwipl/id6511220676',
+    playStore_link: 'https://play.google.com/store/apps/details?id=com.silverproject',
   },
   {
     name: 'Gajra GRO+',
@@ -106,6 +110,6 @@ export const projects = [
       'React Native mobile application, published live on the Google Play Store.',
     features: ['Cross-platform mobile app', 'Production release'],
     tech: ['React Native', 'Android', 'iOS'],
-    link: 'https://play.google.com/store/apps/details?id=com.tfl.gajragear',
+    playStore_link: 'https://play.google.com/store/apps/details?id=com.tfl.gajragear',
   },
 ]
