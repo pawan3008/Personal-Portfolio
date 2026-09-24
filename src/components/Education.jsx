@@ -5,7 +5,7 @@ import { education } from '../data/profile'
 
 export default function Education() {
   return (
-    <Section id="education" eyebrow="06 · Background" title="Education">
+    <Section id="education" eyebrow="07 · Background" title="Education">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}

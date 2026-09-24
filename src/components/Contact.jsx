@@ -47,7 +47,7 @@ export default function Contact() {
   return (
     <Section
       id="contact"
-      eyebrow="07 · Contact"
+      eyebrow="08 · Contact"
       title="Let's Build Something Great"
       subtitle="Have a project, opportunity, or just want to connect? Feel free to reach out."
     >
