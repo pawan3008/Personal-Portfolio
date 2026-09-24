@@ -1,6 +1,8 @@
 import laLogo from '../assets/icons/la_logo.png'
 import mytraLogo from '../assets/icons/mytra_logo.png'
 import gajraLogo from '../assets/icons/gajra_logo.jpg'
+import wwiplLogo from '../assets/icons/wwipl_logo.png'
+import silverLogo from '../assets/icons/silver_logo.png'
 
 export const projects = [
   {
@@ -34,6 +36,7 @@ export const projects = [
     subtitle: 'Unlisted & Pre-IPO Investment Platform',
     category: 'Fintech · React Native',
     featured: false,
+    logo: wwiplLogo,
     description: 'Investment platform for unlisted, delisted and Pre-IPO shares.',
     features: [
       'Portfolio module',
@@ -99,6 +102,7 @@ export const projects = [
     subtitle: 'Loyalty & Service',
     category: 'Loyalty · Service · React Native',
     featured: false,
+    logo: silverLogo,
     description:
       'React Native loyalty and service application, published live on the Google Play Store.',
     features: ['Loyalty program', 'Service management', 'Cross-platform mobile app'],
