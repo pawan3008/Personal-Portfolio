@@ -1,9 +1,14 @@
+import laLogo from '../assets/icons/la_logo.png'
+import mytraLogo from '../assets/icons/mytra_logo.png'
+import gajraLogo from '../assets/icons/gajra_logo.jpg'
+
 export const projects = [
   {
     name: 'Language Academy',
     subtitle: 'PTE Practice & AI Mock Tests',
     category: 'Education · React Native · iOS & Android',
     featured: true,
+    logo: laLogo,
     description:
       'Large-scale React Native PTE preparation platform with complex practice and mock-test workflows.',
     features: [
@@ -47,6 +52,7 @@ export const projects = [
     subtitle: 'Rider, E-commerce & Social Platform',
     category: 'Mobility · E-commerce · Social',
     featured: false,
+    logo: mytraLogo,
     description:
       'Cross-platform app combining real-time ride tracking, social sharing, and e-commerce.',
     features: [
@@ -87,7 +93,6 @@ export const projects = [
       'Property calculators',
     ],
     tech: ['React Native', 'Maps', 'Chat', 'E-learning'],
-    link: '',
   },
   {
     name: 'Silver Saarthi',
@@ -106,6 +111,7 @@ export const projects = [
     subtitle: 'Mobile Application',
     category: 'Mobile · React Native',
     featured: false,
+    logo: gajraLogo,
     description:
       'React Native mobile application, published live on the Google Play Store.',
     features: ['Cross-platform mobile app', 'Production release'],

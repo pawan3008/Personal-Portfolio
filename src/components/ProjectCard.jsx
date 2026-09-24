@@ -34,14 +34,25 @@ export default function ProjectCard({ project, featured = false, index = 0 }) {
         aria-hidden="true"
       >
         <div className="absolute inset-0 bg-grid-faint bg-[size:28px_28px] opacity-40" />
-        <span className="relative select-none font-mono text-4xl font-bold tracking-tight text-white/90 transition-transform duration-300 md:group-hover:scale-105 sm:text-5xl">
-          {project.name
-            .split(' ')
-            .map((w) => w[0])
-            .join('')
-            .slice(0, 2)
-            .toUpperCase()}
-        </span>
+        {project.logo ? (
+          <img
+            src={project.logo}
+            alt={`${project.name} logo`}
+            loading="lazy"
+            className={`relative select-none rounded-2xl object-contain shadow-card transition-transform duration-300 md:group-hover:scale-105 ${
+              featured ? 'h-28 w-28' : 'h-20 w-20'
+            }`}
+          />
+        ) : (
+          <span className="relative select-none font-mono text-4xl font-bold tracking-tight text-white/90 transition-transform duration-300 md:group-hover:scale-105 sm:text-5xl">
+            {project.name
+              .split(' ')
+              .map((w) => w[0])
+              .join('')
+              .slice(0, 2)
+              .toUpperCase()}
+          </span>
+        )}
         <span className="absolute bottom-3 left-4 font-mono text-xs text-ink-faint">
           {project.category}
         </span>

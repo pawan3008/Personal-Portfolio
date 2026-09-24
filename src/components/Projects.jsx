@@ -45,7 +45,17 @@ export default function Projects() {
                 transition={{ duration: 0.4, ease: 'easeOut', delay: (i % 2) * 0.06 }}
                 className="surface flex items-center justify-between gap-3 p-4 transition-colors hover:border-accent/40"
               >
-                <span className="min-w-0 font-medium text-ink">{app.name}</span>
+                <span className="flex min-w-0 items-center gap-3">
+                  {app.logo && (
+                    <img
+                      src={app.logo}
+                      alt={`${app.name} logo`}
+                      loading="lazy"
+                      className="h-9 w-9 shrink-0 rounded-lg object-contain"
+                    />
+                  )}
+                  <span className="truncate font-medium text-ink">{app.name}</span>
+                </span>
                 <span className="flex shrink-0 items-center gap-2">
                   {app.appStore_link && (
                     <a

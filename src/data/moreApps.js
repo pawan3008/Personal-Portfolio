@@ -1,4 +1,6 @@
-// Additional published apps contributed to. Names + store links only.
+import germanLogo from '../assets/icons/germanlogo.png'
+
+// Additional published apps contributed to.
 export const moreApps = [
   {
     name: 'Qamoos53',
@@ -15,6 +17,7 @@ export const moreApps = [
   {
     name: 'GermanTMX',
     store: 'Google Play',
+    logo: germanLogo,
     appStore_link: 'https://apps.apple.com/in/app/german-tmx/id6738163728',
     playStore_link: 'https://play.google.com/store/apps/details?id=com.germantmx',
   },
