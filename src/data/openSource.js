@@ -16,4 +16,20 @@ export const openSource = [
     npm: 'https://www.npmjs.com/package/react-native-permission-manager',
     github: 'https://github.com/pawan3008/react-native-permission-manager',
   },
+  {
+    name: 'rn-audio-toolkit',
+    version: '1.3.3',
+    description:
+      'React Native audio playback with hooks, waveforms, an exam "playOnce" mode, caching, preloading, and background playback for iOS & Android — built for language-learning apps like PTE/IELTS.',
+    highlights: [
+      'Playback hooks with waveform support',
+      'Exam playOnce mode for test scenarios',
+      'Audio caching, preloading & background playback',
+      'New Architecture / TurboModule support',
+    ],
+    tech: ['React Native', 'Audio', 'TurboModule', 'iOS', 'Android'],
+    license: 'MIT',
+    npm: 'https://www.npmjs.com/package/rn-audio-toolkit',
+    github: 'https://github.com/pawan3008/rn-audio-toolkit',
+  },
 ]
